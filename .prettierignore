@@ -2,7 +2,7 @@
 # See https://gowebly.org for more information.
 
 # Ignore static files.
-web/static/
+internal/web/static/
 
 # Ignore templates.
-templates/
+internal/web/templates/

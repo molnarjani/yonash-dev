@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"log/slog"
@@ -6,8 +6,8 @@ import (
 
 	"github.com/angelofallars/htmx-go"
 
-	"github.com/molnarjani/yonash-dev/web/templates"
-	"github.com/molnarjani/yonash-dev/web/templates/pages"
+	"github.com/molnarjani/yonash-dev/internal/web/templates"
+	"github.com/molnarjani/yonash-dev/internal/web/templates/pages"
 )
 
 // indexViewHandler handles a view for the index page.

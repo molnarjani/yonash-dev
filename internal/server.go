@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"embed"
@@ -12,11 +12,11 @@ import (
 	gowebly "github.com/gowebly/helpers"
 )
 
-//go:embed all:web/static/*
+//go:embed web/static
 var static embed.FS
 
 // runServer runs a new HTTP server with the loaded environment variables.
-func runServer() error {
+func RunServer() error {
 	// Validate environment variables.
 	port, err := strconv.Atoi(gowebly.Getenv("BACKEND_PORT", "8080"))
 	if err != nil {

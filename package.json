@@ -6,9 +6,9 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "fmt": "prettier --write .",
-    "build": "parcel build ./web/assets/scripts.js ./web/assets/styles.scss --dist-dir ./web/static",
-    "dev": "parcel build ./web/assets/scripts.js ./web/assets/styles.scss --dist-dir ./web/static --no-optimize",
-    "watch": "parcel watch ./web/assets/scripts.js ./web/assets/styles.scss --dist-dir ./web/static --no-optimize"
+    "build": "parcel build ./internal/web/assets/scripts.js ./internal/web/assets/styles.scss --dist-dir ./internal/web/static",
+    "dev": "parcel build ./internal/web/assets/scripts.js ./internal/web/assets/styles.scss --dist-dir ./internal/web/static --no-optimize",
+    "watch": "parcel watch ./internal/web/assets/scripts.js ./internal/web/assets/styles.scss --dist-dir ./internal/web/static --no-optimize"
   },
   "dependencies": {
     "@tailwindcss/forms": "latest",
