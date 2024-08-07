@@ -4,6 +4,9 @@
 # macOS files.
 .DS_Store
 
+# VSCode debug
+__debug_bin*
+
 # IDE files.
 .idea/
 .vscode/
