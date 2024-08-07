@@ -1,5 +1,8 @@
 APP_NAME = yonash-dev-server
 
+run:
+	gowebly run
+
 docker-build:
 	docker build -t ${APP_NAME}:latest -f build/Dockerfile .
 
@@ -7,4 +10,4 @@ docker-build:
 docker-compose-run:
 	docker-compose up -d
 
-.PHONY: docker-build docker-compose-up
+.PHONY: run docker-build docker-compose-up
