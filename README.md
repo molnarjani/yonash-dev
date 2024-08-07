@@ -16,6 +16,20 @@ Backend:
 Frontend:
 - HTMX + TailwindCSS
 
+## Project structure
+Project structure follows [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
+
+```
+.
+├── cmd/                        -- app entrypoints
+│   └── cmd/server/main.go      -- server main entrypoint
+└── internal/                   -- internal packaged
+    └── web/                    -- static web assets, server side templates 
+        ├── assets/
+        ├── static/
+        └── templates/          -- go templ components
+```
+
 ## Starting your project
 
 > ❗️ Please make sure that you have installed the executable files for all the necessary tools before starting your project. Exactly:
