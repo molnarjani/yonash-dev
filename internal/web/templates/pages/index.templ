@@ -1,5 +1,9 @@
 package pages
 
+import (
+	"github.com/molnarjani/yonash-dev/internal/web/templates/components"
+)
+
 // MetaTags defines meta tags.
 
 templ MetaTags(keywords, description string) {
@@ -17,10 +21,9 @@ css styledTextStyles() {
 
 templ BodyContent(h1, text string) {
 	<div id="app">
+		<div id="navbar">@components.NavBar()</div>
+
 		<div>
-			<a href="https://gowebly.org" target="_blank">
-				<img src="/static/images/gowebly.svg" class="gowebly logo" alt="Gowebly logo"/>
-			</a>
 			<h1>Go + Templ + htmx</h1>
 			<p class={ styledTextStyles() }>
 				You're using <strong>Templ</strong> package to generate HTML content!
