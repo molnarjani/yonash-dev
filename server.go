@@ -23,13 +23,12 @@ func runServer() error {
 		return err
 	}
 
-	// Only server the subtree under /static route
 	webStaticSubtree, err := fs.Sub(static, "web/static")
 	if err != nil {
 		panic(err)
 	}
-	// Handle static files from the embed FS (with a custom handler).
-	http.Handle("GET /static/", gowebly.StaticFileServerHandler(http.FS(webStaticSubtree)))
+	// Serve static files from the "static" directory.
+	http.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(webStaticSubtree))))
 
 	// Handle index page view.
 	http.HandleFunc("GET /", indexViewHandler)

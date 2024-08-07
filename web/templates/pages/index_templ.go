@@ -34,7 +34,7 @@ func MetaTags(keywords, description string) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(keywords)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/index.templ`, Line: 6, Col: 41}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/index.templ`, Line: 6, Col: 41}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -47,7 +47,7 @@ func MetaTags(keywords, description string) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(description)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/index.templ`, Line: 7, Col: 47}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/index.templ`, Line: 7, Col: 47}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -107,13 +107,13 @@ func BodyContent(h1, text string) templ.Component {
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(templ.CSSClasses(templ_7745c5c3_Var5).String())
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/index.templ`, Line: 1, Col: 0}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `web/templates/pages/index.templ`, Line: 1, Col: 0}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">You're using <strong>Templ</strong> package to generate HTML content!<br>Edit this styled text in the <code>./templates/pages/index.templ</code> file.</p><div class=\"content\"><button hx-get=\"/api/hello-world\" hx-target=\"#htmx-result\">Hello, World!</button><div id=\"htmx-result\"></div></div><p class=\"read-the-docs\">A next-generation CLI tool that makes it easy to create amazing web applications<br>with <strong>Go</strong> on the backend, using <strong>htmx</strong>, <strong>hyperscript</strong> or <strong>Alpine.js</strong>,<br>and the most popular CSS frameworks on the frontend.</p><p class=\"read-the-docs\"><a href=\"https://gowebly.org\" target=\"_blank\">Documentation</a> &sdot; <a href=\"https://github.com/gowebly/gowebly\" target=\"_blank\">GitHub</a></p></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\">You're using <strong>Templ</strong> package to generate HTML content!<br>Edit this styled text in the <code>./web/templates/pages/index.templ</code> file.</p><div class=\"content\"><button hx-get=\"/api/hello-world\" hx-target=\"#htmx-result\">Hello, World!</button><div id=\"htmx-result\"></div></div><p class=\"read-the-docs\">A next-generation CLI tool that makes it easy to create amazing web applications<br>with <strong>Go</strong> on the backend, using <strong>htmx</strong>, <strong>hyperscript</strong> or <strong>Alpine.js</strong>,<br>and the most popular CSS frameworks on the frontend.</p><p class=\"read-the-docs\"><a href=\"https://gowebly.org\" target=\"_blank\">Documentation</a> &sdot; <a href=\"https://github.com/gowebly/gowebly\" target=\"_blank\">GitHub</a></p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -124,13 +124,13 @@ func BodyContent(h1, text string) templ.Component {
 // BodyScripts defines JavaScript code.
 func BodyScripts() templ.ComponentScript {
 	return templ.ComponentScript{
-		Name: `__templ_BodyScripts_3e71`,
-		Function: `function __templ_BodyScripts_3e71(){console.log(
+		Name: `__templ_BodyScripts_a967`,
+		Function: `function __templ_BodyScripts_a967(){console.log(
 		"You're using Templ package to generate HTML content!",
-		"Edit this JavaScript code in the ` + "`" + `./templates/pages/index.templ` + "`" + ` file.",
+		"Edit this JavaScript code in the ` + "`" + `./web/templates/pages/index.templ` + "`" + ` file.",
 	);
 }`,
-		Call:       templ.SafeScript(`__templ_BodyScripts_3e71`),
-		CallInline: templ.SafeScriptInline(`__templ_BodyScripts_3e71`),
+		Call:       templ.SafeScript(`__templ_BodyScripts_a967`),
+		CallInline: templ.SafeScriptInline(`__templ_BodyScripts_a967`),
 	}
 }

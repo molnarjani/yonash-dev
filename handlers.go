@@ -6,8 +6,8 @@ import (
 
 	"github.com/angelofallars/htmx-go"
 
-	"github.com/molnarjani/yonash-dev/templates"
-	"github.com/molnarjani/yonash-dev/templates/pages"
+	"github.com/molnarjani/yonash-dev/web/templates"
+	"github.com/molnarjani/yonash-dev/web/templates/pages"
 )
 
 // indexViewHandler handles a view for the index page.
