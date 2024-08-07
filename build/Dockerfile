@@ -7,7 +7,9 @@ FROM golang:1.22-alpine AS builder
 WORKDIR /build
 
 # Copy and download dependency using go mod.
-COPY go.mod go.sum ./
+COPY ./go.mod go.sum ./
+
+# Download dependencies.
 RUN go mod download
 
 # Copy your code into the container.

@@ -7,11 +7,7 @@ version: '3.8'
 services:
   # Service for the 'default' Go backend.
   gowebly_default:
-    # Configuration for building the Docker image for the service.
-    build:
-      # Use an image built from the specified Dockerfile in the current directory.
-      context: .
-      dockerfile: Dockerfile
+    image: yonash-dev-server:latest
     # Set restart rules for the container.
     restart: unless-stopped
     # Forward the exposed port 8080 on the container to port 8080 on the host machine.
