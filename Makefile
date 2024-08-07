@@ -3,6 +3,9 @@ APP_NAME = yonash-dev-server
 run:
 	gowebly run
 
+lint:
+	golangci-lint run
+
 docker-build:
 	docker build -t ${APP_NAME}:latest -f build/Dockerfile .
 
