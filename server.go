@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"fmt"
+	"io/fs"
 	"log/slog"
 	"net/http"
 	"strconv"
@@ -11,7 +12,7 @@ import (
 	gowebly "github.com/gowebly/helpers"
 )
 
-//go:embed all:static
+//go:embed all:web/static/*
 var static embed.FS
 
 // runServer runs a new HTTP server with the loaded environment variables.
@@ -22,8 +23,13 @@ func runServer() error {
 		return err
 	}
 
+	// Only server the subtree under /static route
+	webStaticSubtree, err := fs.Sub(static, "web/static")
+	if err != nil {
+		panic(err)
+	}
 	// Handle static files from the embed FS (with a custom handler).
-	http.Handle("GET /static/", gowebly.StaticFileServerHandler(http.FS(static)))
+	http.Handle("GET /static/", gowebly.StaticFileServerHandler(http.FS(webStaticSubtree)))
 
 	// Handle index page view.
 	http.HandleFunc("GET /", indexViewHandler)
