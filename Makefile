@@ -4,7 +4,10 @@ run:
 	gowebly run
 
 lint:
-	golangci-lint run
+	templ generate 2> /dev/null && golangci-lint run --show-stats
+
+lint-fix:
+	golangci-lint run --fix
 
 docker-build:
 	docker build -t ${APP_NAME}:latest -f build/Dockerfile .
