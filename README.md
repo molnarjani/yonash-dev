@@ -28,6 +28,7 @@ Project structure follows [golang-standards/project-layout](https://github.com/g
         ├── assets/
         ├── static/
         └── templates/          -- go templ components
+    └── content/                -- content data for pages
 ```
 
 ## Starting your project
