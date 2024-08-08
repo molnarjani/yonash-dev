@@ -7,6 +7,7 @@ import (
 
 	"github.com/angelofallars/htmx-go"
 
+	"github.com/molnarjani/yonash-dev/internal/content"
 	"github.com/molnarjani/yonash-dev/internal/web/templates"
 	"github.com/molnarjani/yonash-dev/internal/web/templates/pages"
 )
@@ -46,7 +47,15 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 
 // pageRoutingHandler handles serving Page contents from API
 func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
-	page := r.PathValue("page")
+	pages := map[string]content.Page{
+		"projects": content.ProjectsPage,
+		"cv":       content.CVPage,
+		"blog":     content.BlogPage,
+		"contact":  content.ContactPage,
+	}
+
+	pageName := r.PathValue("page")
+	page := pages[pageName]
 
 	// Check, if the current request has a 'HX-Request' header.
 	// For more information, see https://htmx.org/docs/#request-headers
@@ -59,7 +68,7 @@ func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Write HTML content.
 	_, err := w.Write([]byte(
-		fmt.Sprintf("<p>🎉 Yes, <strong>htmx</strong> is ready to use! (<code>GET /api/pages/%s</code>)</p>", page),
+		fmt.Sprintf("<p>%s</p>", page.Content),
 	))
 	if err != nil {
 		slog.Error("write response", "error", err)
