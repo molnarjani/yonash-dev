@@ -16,21 +16,18 @@ import (
 func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 	// Define template meta tags.
 	metaTags := pages.MetaTags(
-		"gowebly, htmx example page, go with htmx",               // define meta keywords
-		"Welcome to example! You're here because it worked out.", // define meta description
+		"yonash.dev, developer page, backend development",      // define meta keywords
+		"Developer page for my backend development endeavours", // define meta description
 	)
 
 	// Define template body content.
-	bodyContent := pages.BodyContent(
-		"Welcome to example!",                // define h1 text
-		"You're here because it worked out.", // define p text
-	)
+	bodyContent := pages.BodyContent()
 
 	// Define template layout for index page.
 	indexTemplate := templates.Layout(
-		"Welcome to example!", // define title text
-		metaTags,              // define meta tags
-		bodyContent,           // define body content
+		"yonash.dev", // define title text
+		metaTags,     // define meta tags
+		bodyContent,  // define body content
 	)
 
 	// Render index page template.

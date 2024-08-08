@@ -5,6 +5,14 @@ import (
     "fmt"
 )
 
+templ Logo() {
+    <!-- Logo -->
+    <a href="#" class="flex items-left space-x-3 rtl:space-x-reverse block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+        <span class="self-center text-xl text-left text-gray-700 text-inherit font-semibold whitespace-nowrap dark:text-white">
+            <span class="blink">{ "{ " }</span>yonash<span class="blink">.</span>dev<span class="blink">{ " }" }</span>
+        </span>
+    </a>
+}
 
 templ NavBarItem(name string) {
     <li>
@@ -28,11 +36,8 @@ templ NavBarMenuItems() {
 templ NavBar() {
     <nav class="border-gray-200 dark:bg-gray-900">
         <!-- Desktop navbar -->
-        <div class="max-w-screen-2xl flex flex-wrap items-left justify-between mx-auto p-4 logo">
-            <!-- Logo -->
-            <a href="#" class="flex items-left space-x-3 rtl:space-x-reverse block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-               <span class="self-center glitch text-2xl text-left text-gray-700 text-inherit font-semibold whitespace-nowrap dark:text-white"><span class="blink">{ "{ " }</span>yonash.dev<span class="blink">{ " }" }</span></span>
-            </a>
+        <div class="max-w-screen-2xl flex flex-wrap items-left justify-between mx-auto p-4">
+            @Logo()
 
             <!-- Desktop navbar Items -->
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
