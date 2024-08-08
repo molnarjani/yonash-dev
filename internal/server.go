@@ -30,11 +30,11 @@ func RunServer() error {
 	// Serve static files from the "static" directory.
 	http.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(webStaticSubtree))))
 
-	// Handle index page view.
-	http.HandleFunc("GET /", indexViewHandler)
-
 	// Handle API endpoints.
-	http.HandleFunc("GET /api/hello-world", showContentAPIHandler)
+	http.HandleFunc("GET /api/pages/{page}", pageRoutingHandler)
+
+	// Handle index page view.
+	http.HandleFunc("GET /{$}", indexViewHandler)
 
 	// Create a new server instance with options from environment variables.
 	// For more information, see https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/

@@ -92,7 +92,7 @@ func BodyContent(h1, text string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"content content-center\"><h1>Go + Templ + htmx</h1><p class=\"text-emerald-400\">You're using <strong>Templ</strong> package to generate HTML content!<br>Edit this styled text in the <code>./internal/web/templates/pages/index.templ</code> file.</p><div class=\"content\"><button hx-get=\"/api/hello-world\" hx-target=\"#htmx-result\">Hello, World!</button><div id=\"htmx-result\"></div></div></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"content content-center\"><div id=\"page-content\" class=\"content\"></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -1,6 +1,7 @@
 package server
 
 import (
+	"fmt"
 	"log/slog"
 	"net/http"
 
@@ -43,8 +44,10 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 	slog.Info("render page", "method", r.Method, "status", http.StatusOK, "path", r.URL.Path)
 }
 
-// showContentAPIHandler handles an API endpoint to show content.
-func showContentAPIHandler(w http.ResponseWriter, r *http.Request) {
+// pageRoutingHandler handles serving Page contents from API
+func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
+	page := r.PathValue("page")
+
 	// Check, if the current request has a 'HX-Request' header.
 	// For more information, see https://htmx.org/docs/#request-headers
 	if !htmx.IsHTMX(r) {
@@ -55,7 +58,9 @@ func showContentAPIHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Write HTML content.
-	_, err := w.Write([]byte("<p>🎉 Yes, <strong>htmx</strong> is ready to use! (<code>GET /api/hello-world</code>)</p>"))
+	_, err := w.Write([]byte(
+		fmt.Sprintf("<p>🎉 Yes, <strong>htmx</strong> is ready to use! (<code>GET /api/pages/%s</code>)</p>", page),
+	))
 	if err != nil {
 		slog.Error("write response", "error", err)
 	}
