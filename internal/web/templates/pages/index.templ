@@ -11,11 +11,6 @@ templ MetaTags(keywords, description string) {
 	<meta name="description" content={ description }/>
 }
 
-// styledTextStyles defines CSS styles for component.
-
-css styledTextStyles() {
-	color: #02BF87;
-}
 
 // BodyContent defines HTML content.
 
@@ -23,9 +18,9 @@ templ BodyContent(h1, text string) {
 	<div id="app">
 		<div id="navbar">@components.NavBar()</div>
 
-		<div>
+		<div class="content content-center">
 			<h1>Go + Templ + htmx</h1>
-			<p class={ styledTextStyles() }>
+			<p class="text-emerald-400">
 				You're using <strong>Templ</strong> package to generate HTML content!
 				<br/>
 				Edit this styled text in the <code>./internal/web/templates/pages/index.templ</code> file.
@@ -34,18 +29,6 @@ templ BodyContent(h1, text string) {
 				<button hx-get="/api/hello-world" hx-target="#htmx-result">Hello, World!</button>
 				<div id="htmx-result"></div>
 			</div>
-			<p class="read-the-docs">
-				A next-generation CLI tool that makes it easy to create amazing web applications
-				<br/>
-				with <strong>Go</strong> on the backend, using <strong>htmx</strong>,
-				<strong>hyperscript</strong> or <strong>Alpine.js</strong>,
-				<br/>
-				and the most popular CSS frameworks on the frontend.
-			</p>
-			<p class="read-the-docs">
-				<a href="https://gowebly.org" target="_blank">Documentation</a> &sdot;
-				<a href="https://github.com/gowebly/gowebly" target="_blank">GitHub</a>
-			</p>
 		</div>
 	</div>
 }

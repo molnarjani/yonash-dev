@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 /* Variables */
-$primary-color: #262626;
-$secondary-color: #fefef5;
+$primary-color: #2d2d2d;
+$secondary-color: #fff;
+
+
+/* Color Classes */
+.almost-black {
+  color: "#808080";
+}
 
 /* User styles */
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -18,11 +23,6 @@ $secondary-color: #fefef5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 body {
