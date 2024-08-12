@@ -1,10 +1,14 @@
-# Codebase for yonash.dev
+# Codebase for my portfolio website
 
-This README file contains all the necessary information about:
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/2ab64f2d-4177-425b-b468-a6085605aa1a">
 
+https://yonash.dev
+
+## Links
 - [Project overview](#project-overview)
-- [Starting your project](#starting-your-project)
-- [Developing your project](#developing-your-project)
+- [Project structure](#project-structure)
+- [Running](#running)
+- [Development](#development)
 
 ## Project overview
 yonash.dev is powered by a simple server-side rendering Go service
@@ -31,7 +35,7 @@ Project structure follows [golang-standards/project-layout](https://github.com/g
     └── content/                -- content data for pages
 ```
 
-## Starting your project
+## Running
 
 > ❗️ Please make sure that you have installed the executable files for all the necessary tools before starting your project. Exactly:
 >
@@ -46,7 +50,7 @@ To start your project, run the **Gowebly** CLI command in your terminal:
 gowebly run
 ```
 
-## Developing your project
+## Development
 
 The backend part is located in the `*.go` files in your project folder.
 
