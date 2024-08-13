@@ -1,7 +1,6 @@
 package server
 
 import (
-	"fmt"
 	"log/slog"
 	"net/http"
 
@@ -45,10 +44,10 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 // pageRoutingHandler handles serving Page contents from API
 func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 	pages := map[string]content.Page{
-		"projects": content.ProjectsPage,
-		"cv":       content.CVPage,
-		"blog":     content.BlogPage,
-		"contact":  content.ContactPage,
+		"projects": {Template: pages.ProjectsPage()},
+		"cv":       {Template: pages.CVPage()},
+		"blog":     {Template: pages.BlogPage()},
+		"contact":  {Template: pages.ContactsPage()},
 	}
 
 	pageName := r.PathValue("page")
@@ -64,15 +63,10 @@ func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Write HTML content.
-	_, err := w.Write([]byte(
-		fmt.Sprintf("<p>%s</p>", page.Content),
-	))
-	if err != nil {
-		slog.Error("write response", "error", err)
-	}
+	page.Render(r, w)
 
 	// Send htmx response.
-	err = htmx.NewResponse().Write(w)
+	err := htmx.NewResponse().Write(w)
 	if err != nil {
 		slog.Error("write response", "error", err)
 	}
