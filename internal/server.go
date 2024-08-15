@@ -31,7 +31,7 @@ func RunServer() error {
 	http.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(webStaticSubtree))))
 
 	// Handle API endpoints.
-	http.HandleFunc("GET /api/pages/{page}", pageRoutingHandler)
+	http.HandleFunc("GET /{page}", pageRoutingHandler)
 
 	// Handle index page view.
 	http.HandleFunc("GET /{$}", indexViewHandler)
