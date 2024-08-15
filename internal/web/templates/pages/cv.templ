@@ -66,58 +66,89 @@ templ CVPage() {
                 </div>
                 <div class="col-span-4 sm:col-span-9">
                     <div class="bg-white shadow-xl rounded-lg p-6">
-                        <h2 class="text-xl font-bold mb-4">about me</h2>
-                        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est
-                            vitae tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                            suscipit. Nunc finibus vel ante id euismod. Vestibulum ante ipsum primis in faucibus orci luctus
-                            et ultrices posuere cubilia Curae; Aliquam erat volutpat. Nulla vulputate pharetra tellus, in
-                            luctus risus rhoncus id.
-                        </p>
-
-                        
-
-
-                        <h2 class="text-xl font-bold mt-6 mb-4">experience</h2>
+                        <h2 class="text-xl font-bold mt-6 mb-4">curriculum vitae</h2>
                         <div class="mb-6">
                             <div class="flex justify-between flex-wrap gap-2 w-full">
-                                <span class="text-gray-700 font-bold">Web Developer</span>
+                                <span class="text-blue-700 font-bold">senior backend engineer</span>
                                 <p>
-                                    <span class="text-gray-700 mr-2">at ABC Company</span>
-                                    <span class="text-gray-700">2017 - 2019</span>
+                                    <span><img src="/static/images/formlabs_logo.svg" style="padding-bottom: 0.15rem;" class="w-24 h-10 inline-block" alt="Formlabs Logo"></span>
+                                    <span class="pl-4 text-blue-700">2023 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 </p>
                             </div>
-                            <p class="mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                suscipit.
+                            <p class="mt-2 text-left">
+                            I'm currently working @Formlabs in Fleet Control Team, working on a Dashboard for Formlabs 3D printers.<br>
+                            For the most part I'm developing the synchonisation of data from printers to backend, so we can build cool feature's for the dashboard.
+
+                            <ul style="margin-left: 20px;" class="mt-2 text-left list-disc">
+                                <li>I'm owning and developing the Django backend of the Dashboard</li>
+                                <li>Also developing a Go client application that is synchronizing data from printers to the backend</li>
+                                <li>Transitioned the backend from raw kubernetes manifests to Helm charts</li>
+                                <li>Implemented monitoring in Prometheus for the backend microsevice architecture</li>
+                                <li>Resolved many scalability issues of the backend</li>
+                            </ul>
                             </p>
                         </div>
                         <div class="mb-6">
                             <div class="flex justify-between flex-wrap gap-2 w-full">
-                                <span class="text-gray-700 font-bold">Web Developer</span>
+                                <span class="text-blue-700 font-bold">senior backend engineer</span>
                                 <p>
-                                    <span class="text-gray-700 mr-2">at ABC Company</span>
-                                    <span class="text-gray-700">2017 - 2019</span>
+                                    <span><img src="/static/images/tier_logo.svg" style="padding-bottom: 0.15rem;" class="w-14 h-10 inline-block" alt="TIER Logo"></span>
+                                    <span class="pl-4 text-blue-700">2021 - 2023</span>
                                 </p>
                             </div>
-                            <p class="mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                suscipit.
+                            <p class="mt-2 text-left">
+                            In the backend Map team, I've redisigned the poll based architecture of TIERs backend API to a full-duplex websocket based communication.
+                            This allowed showing vehicle data in real-time.
                             </p>
                         </div>
                         <div class="mb-6">
                             <div class="flex justify-between flex-wrap gap-2 w-full">
-                                <span class="text-gray-700 font-bold">Web Developer</span>
+                                <span class="text-blue-700 font-bold">infrastucture engineer</span>
                                 <p>
-                                    <span class="text-gray-700 mr-2">at ABC Company</span>
-                                    <span class="text-gray-700">2017 - 2019</span>
+                                    <span><img src="/static/images/prezi_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
+                                    <span class="pl-4 text-blue-700">2020 - 2021</span>
                                 </p>
                             </div>
-                            <p class="mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                suscipit.
+                            <p class="mt-2 text-left">
+                            I switched to the infrastucture team and worked on making sure Prezi's microsevice architecture is reliable.
+                            <ul style="margin-left: 20px;" class="mt-2 text-left list-disc">
+                                <li>Worked on improving observability through developing metrics and alerting for service SLOs</li>
+                                <li>Developed Helm charts and Terraform modules</li>
+                                <li>Worked on reducing AWS costs of Prezi</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex justify-between flex-wrap gap-2 w-full">
+                                <span class="text-blue-700 font-bold">full stack engineer</span>
+                                <p>
+                                    <span><img src="/static/images/prezi_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
+                                    <span class="pl-4 text-blue-700">2018 - 2020</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 text-left">
+                            I was in the Payment and Licensing team, developing integrations with payment providers such as Zuora, PayPal and Braintree.
+                            As a full-stack developer I've been developing the Python / Django based backend with a Typescript / React frontend.
+
+                            <ul style="margin-left: 20px;" class="mt-2 text-left list-disc">
+                            <li>Led migration of payments and subscriptions for hundreds of thousands of users between major service providers, ensuring a seamless transition.</li>
+                            <li>Integrated with 3rd party APIs like Zuora, AllPago, Braintree, Kount, Paypal, and Salesforce.</li>
+                            <li>Developed internal RESTful APIs for efficient data retrieval and manipulation.</li>
+                            </ul>
+
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex justify-between flex-wrap gap-2 w-full">
+                                <span class="text-blue-700 font-bold">linux sysadmin / automation engineer</span>
+                                <p>
+                                    <span><img src="/static/images/ibm_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="IBM Logo"></span>
+                                    <span class="pl-4 text-blue-700 w-7 h-7">2015 - 2018</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 text-left">
+                            I've been maintaining IBM hosted servers of big airlines and other important customers.<br>
+                            This involved a lost of shell scripting for monitoring and configuration automations in Bash and Perl mostly.
                             </p>
                         </div>
                     </div>
