@@ -30,7 +30,7 @@ func CVPage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white\"><div class=\"container mx-auto py-8\"><div class=\"grid grid-cols-4 sm:grid-cols-12 gap-6 px-4\"><div class=\"col-span-4 sm:col-span-3\"><div class=\"bg-white shadow-xl rounded-lg p-6\"><div class=\"flex flex-col items-center\"><img src=\"/static/images/cv-pic.jpg\" class=\"w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0\"></img><h1 class=\"text-xl font-bold\">Janos Molnar</h1><p class=\"text-gray-700\">senior backend engineer</p><!-- social icons -->")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white\"><div class=\"container mx-auto py-8\"><div class=\"grid grid-cols-4 sm:grid-cols-12 gap-6 px-4\"><div class=\"col-span-4 sm:col-span-3\"><div class=\"bg-white shadow-xl rounded-lg p-6\"><div class=\"flex flex-col items-center\"><img src=\"/static/images/cv-pic.jpg\" class=\"w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0\"><h1 class=\"text-xl font-bold\">Janos Molnar</h1><p class=\"text-gray-700\">senior backend engineer</p><!-- social icons -->")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

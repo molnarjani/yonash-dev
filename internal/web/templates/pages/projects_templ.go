@@ -26,7 +26,7 @@ func ProjectsPage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div>My personal projects</div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white\"><div class=\"container mx-auto py-8\"><div class=\"col-span-4 sm:col-span-9\"><section class=\"bg-white dark:bg-gray-900\"><div class=\"py-8 lg:py-16 px-4 mx-auto max-w-screen-md\"><p class=\"mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\">My personal projects...</p></div></section></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
