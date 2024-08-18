@@ -17,14 +17,13 @@ COPY . .
 
 # Set necessary environment variables and build your project.
 ENV CGO_ENABLED=0
-RUN go build -ldflags="-s -w" -o gowebly_default
+RUN go build -o server cmd/server/main.go
 
 FROM scratch
 
 # Copy project's binary and templates from /build to the scratch container.
-COPY --from=builder /build/gowebly_default /
-
+COPY --from=builder /build/server /
 
 
 # Set entry point.
-ENTRYPOINT ["/gowebly_default"]
+ENTRYPOINT ["/server"]

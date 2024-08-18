@@ -6,7 +6,7 @@ version: '3.8'
 # Define services.
 services:
   # Service for the 'default' Go backend.
-  gowebly_default:
+  server:
     image: yonash-dev-server:latest
     # Set restart rules for the container.
     restart: unless-stopped
@@ -19,9 +19,9 @@ services:
     # Networks to join.
     # Services on the same network can communicate with each other using their name.
     networks:
-      - gowebly_default_network
+      - server_default_network
 
 # Define Docker networks.
 networks:
   # Create gowebly network.
-  gowebly_default_network:
+  server_default_network:
