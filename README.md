@@ -11,7 +11,7 @@ https://yonash.dev
 - [Development](#development)
 
 ## Project overview
-yonash.dev is powered by a simple server-side rendering Go service
+yonash.dev is a SPA app powered by a simple server-side rendering Go service
 
 Backend:
 - Go web server
@@ -47,7 +47,7 @@ Project structure follows [golang-standards/project-layout](https://github.com/g
 To start your project, run the **Gowebly** CLI command in your terminal:
 
 ```console
-gowebly run
+make run
 ```
 
 ## Development
@@ -57,3 +57,5 @@ The backend part is located in the `*.go` files in your project folder.
 The `./internal/web/templates` folder contains Templ templates that you can use in your frontend part. Also, the `./internal/web/assets` folder contains the `styles.scss` (main styles) and `scripts.js` (main scripts) files.
 
 The `./internal/web/static` folder contains all the static files: icons, images, PWA (Progressive Web App) manifest and other builded/minified assets.
+
+To tests CDN run the program with `CDN_URL` parameter.
