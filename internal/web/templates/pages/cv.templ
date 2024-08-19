@@ -1,7 +1,9 @@
 package pages
 
 import (
+    "fmt"
     "github.com/molnarjani/yonash-dev/internal/web/templates/components"
+	"github.com/molnarjani/yonash-dev/internal/types" 
 )
 
 
@@ -12,7 +14,7 @@ templ CVPage() {
                 <div class="col-span-4 sm:col-span-3">
                     <div class="bg-white shadow-xl rounded-lg p-6">
                         <div class="flex flex-col items-center">
-                            <img src="/static/images/cv-pic.jpg" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"/>
+                            <img src={string(templ.URL(fmt.Sprintf("%s/static/images/cv-pic.jpg", types.GetCDNUrl(ctx))))} class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"/>
 
                             <h1 class="text-xl font-bold">Janos Molnar</h1>
                             <p class="text-gray-700">senior backend engineer</p>
@@ -22,7 +24,7 @@ templ CVPage() {
 
                             <!-- contacts button -->
                             <div class="mt-6 flex flex-wrap gap-4 justify-center">
-                                <a href="#" hx-get="/api/pages/contact" hx-target="#page-content" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                                <a href="#" hx-get="/pages/contact" hx-target="#page-content" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     contact me
                                 </a>
                             </div>
@@ -57,7 +59,7 @@ templ CVPage() {
                             <div class="flex justify-between flex-wrap gap-2 w-full">
                                 <span class="text-blue-700 font-bold">senior backend engineer</span>
                                 <p>
-                                    <span><img src="/static/images/formlabs_logo.svg" style="padding-bottom: 0.15rem;" class="w-24 h-10 inline-block" alt="Formlabs Logo"></span>
+                                    <span><img src={string(templ.URL(fmt.Sprintf("%s/static/images/formlabs_logo.svg", types.GetCDNUrl(ctx))))} style="padding-bottom: 0.15rem;" class="w-24 h-10 inline-block" alt="Formlabs Logo"></span>
                                     <span class="pl-4 text-blue-700">2023 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 </p>
                             </div>
@@ -78,7 +80,7 @@ templ CVPage() {
                             <div class="flex justify-between flex-wrap gap-2 w-full">
                                 <span class="text-blue-700 font-bold">senior backend engineer</span>
                                 <p>
-                                    <span><img src="/static/images/tier_logo.svg" style="padding-bottom: 0.15rem;" class="w-14 h-10 inline-block" alt="TIER Logo"></span>
+                                    <span><img src={string(templ.URL(fmt.Sprintf("%s/static/images/tier_logo.svg", types.GetCDNUrl(ctx))))} style="padding-bottom: 0.15rem;" class="w-14 h-10 inline-block" alt="TIER Logo"></span>
                                     <span class="pl-4 text-blue-700">2021 - 2023</span>
                                 </p>
                             </div>
@@ -91,7 +93,7 @@ templ CVPage() {
                             <div class="flex justify-between flex-wrap gap-2 w-full">
                                 <span class="text-blue-700 font-bold">infrastucture engineer</span>
                                 <p>
-                                    <span><img src="/static/images/prezi_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
+                                    <span><img src={string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx))))} style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
                                     <span class="pl-4 text-blue-700">2020 - 2021</span>
                                 </p>
                             </div>
@@ -108,7 +110,7 @@ templ CVPage() {
                             <div class="flex justify-between flex-wrap gap-2 w-full">
                                 <span class="text-blue-700 font-bold">full stack engineer</span>
                                 <p>
-                                    <span><img src="/static/images/prezi_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
+                                    <span><img src={string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx))))} style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="Prezi Logo"></span>
                                     <span class="pl-4 text-blue-700">2018 - 2020</span>
                                 </p>
                             </div>
@@ -128,7 +130,7 @@ templ CVPage() {
                             <div class="flex justify-between flex-wrap gap-2 w-full">
                                 <span class="text-blue-700 font-bold">linux sysadmin / automation engineer</span>
                                 <p>
-                                    <span><img src="/static/images/ibm_logo.svg" style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="IBM Logo"></span>
+                                    <span><img src={string(templ.URL(fmt.Sprintf("%s/static/images/ibm_logo.svg", types.GetCDNUrl(ctx))))} style="padding-bottom: 0.15rem;" class="w-10 h-10 inline-block" alt="IBM Logo"></span>
                                     <span class="pl-4 text-blue-700 w-7 h-7">2015 - 2018</span>
                                 </p>
                             </div>

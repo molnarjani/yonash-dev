@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Run your server.
-	if err := server.RunServer(); err != nil {
+	if err := server.RunServer(os.Getenv); err != nil {
 		slog.Error("Failed to start server!", "details", err.Error())
 		os.Exit(1)
 	}

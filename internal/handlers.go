@@ -24,9 +24,9 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Define template layout for index page.
 	indexTemplate := templates.Layout(
-		"yonash.dev", // define title text
-		metaTags,     // define meta tags
-		bodyContent,  // define body content
+		"yonash.dev",
+		metaTags,
+		bodyContent,
 	)
 
 	// Render index page template.
