@@ -22,6 +22,8 @@ bin/
 dist-ssr/
 dist/
 pb_data/
+internal/web/static/styles.css
+internal/web/static/styles.css.map
 
 # Node modules.
 node_modules/
