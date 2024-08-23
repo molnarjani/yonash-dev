@@ -20,7 +20,7 @@ templ BodyContent() {
 	<div id="app">
 		<div id="navbar">@components.NavBar()</div>
 
-		<div class="content content-center0">
+		<div class="sm:content content-center0">
 			<div id="page-content" class="content0">
 				<section class="bg-white dark:bg-gray-900">
 					<div class="grid max-w-screen-xl px-4 py-8 mx-auto xl:gap-0 md:py-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 md:gap-8 md:py-16 md:grid-cols-12">
@@ -38,8 +38,11 @@ templ BodyContent() {
 								I'm a backend developer based in Budapest, who likes to do fun projects involving Python, Go or other backends.<br>
 								I believe in strong ownership built upon scalability and obervability, I'm often involved in infrastructure and DevOps work as well.
 							</p>
-							<a style="animation-delay: 3.5s;" href="#" hx-get="/projects" hx-target="#page-content" class="opacity-0 animate-fade-in shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+							<a style="animation-delay: 3.5s;" href="#" hx-get="/projects" hx-target="#page-content" class="w-60 text-center opacity-0 animate-fade-in shadow-xl float-left justify-content mr-3 mb-3 px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
 								See my projects
+							</a>
+							<a style="animation-delay: 3.5s;" href="#" hx-get="/projects" hx-target="#page-content" class="w-60 text-center opacity-0 animate-fade-in shadow-xl float-left justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+								Check my work stuff
 							</a>
 						</div>
 					</div>
