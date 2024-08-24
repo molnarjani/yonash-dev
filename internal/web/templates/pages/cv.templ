@@ -22,6 +22,13 @@ templ CVPage() {
                             <!-- social icons -->
                             @components.SocialIcons()
 
+                            <!-- download CV button -->
+                            <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                                <a href="#" hx-get="/pages/contact" hx-target="#page-content" hx-push-url="true" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                                    download cv
+                                </a>
+                            </div>
+
                             <!-- contacts button -->
                             <div class="mt-6 flex flex-wrap gap-4 justify-center">
                                 <a href="#" hx-get="/pages/contact" hx-target="#page-content" hx-push-url="true" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
@@ -65,7 +72,7 @@ templ CVPage() {
                             </div>
                             <p class="mt-2 text-left">
                             I'm currently working @Formlabs in Fleet Control Team, working on a Dashboard for Formlabs 3D printers.<br>
-                            For the most part I'm developing the synchonisation of data from printers to backend, so we can build cool feature's for the dashboard.
+                            For the most part I'm developing the synchonization of data from printers to backend, so we can build cool features for the dashboard.
 
                             <ul style="margin-left: 20px;" class="mt-2 text-left list-disc">
                                 <li>I'm owning and developing the Django backend of the Dashboard</li>
