@@ -24,7 +24,7 @@ templ CVPage() {
 
                             <!-- download CV button -->
                             <div class="mt-6 flex flex-wrap gap-4 justify-center">
-                                <a href="/static/documents/cv.pdf" download="janos_molnar_CV.pdf" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                                <a href={templ.URL(fmt.Sprintf("%s/static/documents/cv.pdf", types.GetCDNUrl(ctx)))}  target="_blank" download="janos_molnar_CV.pdf" class="shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     download cv
                                 </a>
                             </div>

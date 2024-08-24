@@ -53,16 +53,25 @@ func CVPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!-- download CV button --><div class=\"mt-6 flex flex-wrap gap-4 justify-center\"><a href=\"/static/documents/cv.pdf\" download=\"janos_molnar_CV.pdf\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">download cv</a></div><!-- contacts button --><div class=\"mt-6 flex flex-wrap gap-4 justify-center\"><a href=\"#\" hx-get=\"/pages/contact\" hx-target=\"#page-content\" hx-push-url=\"true\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">contact me</a></div></div><hr class=\"my-6 border-t border-gray-300\"><div class=\"flex flex-col text-left mb-8\"><span class=\"text-gray-700 uppercase font-bold tracking-wider mb-2\">programming skills</span><ul><li class=\"mb-0\">Python(5+ years)</li><li class=\"mb-0\">Django, FastAPI, etc</li><li class=\"mb-0\">Go</li><li class=\"mb-0\">Frontent(JS, TS)</li><li class=\"mb-0\">SQL</li></ul></div><div class=\"flex flex-col text-left\"><span class=\"text-gray-700 uppercase font-bold tracking-wider mb-2\">ops skills</span><ul><li class=\"mb-0\">AWS / GCP</li><li class=\"mb-0\">Kubernetes / Helm</li><li class=\"mb-0\">Prometheus</li><li class=\"mb-0\">Terraform</li><li class=\"mb-0\">Bash / Linux</li></ul></div></div></div><div class=\"col-span-4 sm:col-span-9\"><div class=\"bg-white shadow-xl rounded-lg p-6\"><h2 class=\"text-xl font-bold mt-6 mb-4\">curriculum vitae</h2><div class=\"mb-6\"><div class=\"flex justify-between flex-wrap gap-2 w-full\"><span class=\"text-blue-700 font-bold\">senior backend engineer</span><p><span><img src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!-- download CV button --><div class=\"mt-6 flex flex-wrap gap-4 justify-center\"><a href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/formlabs_logo.svg", types.GetCDNUrl(ctx)))))
+		var templ_7745c5c3_Var3 templ.SafeURL = templ.URL(fmt.Sprintf("%s/static/documents/cv.pdf", types.GetCDNUrl(ctx)))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(string(templ_7745c5c3_Var3)))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\" download=\"janos_molnar_CV.pdf\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">download cv</a></div><!-- contacts button --><div class=\"mt-6 flex flex-wrap gap-4 justify-center\"><a href=\"#\" hx-get=\"/pages/contact\" hx-target=\"#page-content\" hx-push-url=\"true\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">contact me</a></div></div><hr class=\"my-6 border-t border-gray-300\"><div class=\"flex flex-col text-left mb-8\"><span class=\"text-gray-700 uppercase font-bold tracking-wider mb-2\">programming skills</span><ul><li class=\"mb-0\">Python(5+ years)</li><li class=\"mb-0\">Django, FastAPI, etc</li><li class=\"mb-0\">Go</li><li class=\"mb-0\">Frontent(JS, TS)</li><li class=\"mb-0\">SQL</li></ul></div><div class=\"flex flex-col text-left\"><span class=\"text-gray-700 uppercase font-bold tracking-wider mb-2\">ops skills</span><ul><li class=\"mb-0\">AWS / GCP</li><li class=\"mb-0\">Kubernetes / Helm</li><li class=\"mb-0\">Prometheus</li><li class=\"mb-0\">Terraform</li><li class=\"mb-0\">Bash / Linux</li></ul></div></div></div><div class=\"col-span-4 sm:col-span-9\"><div class=\"bg-white shadow-xl rounded-lg p-6\"><h2 class=\"text-xl font-bold mt-6 mb-4\">curriculum vitae</h2><div class=\"mb-6\"><div class=\"flex justify-between flex-wrap gap-2 w-full\"><span class=\"text-blue-700 font-bold\">senior backend engineer</span><p><span><img src=\"")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var4 string
+		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/formlabs_logo.svg", types.GetCDNUrl(ctx)))))
 		if templ_7745c5c3_Err != nil {
 			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/cv.templ`, Line: 69, Col: 142}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -70,12 +79,12 @@ func CVPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var4 string
-		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/tier_logo.svg", types.GetCDNUrl(ctx)))))
+		var templ_7745c5c3_Var5 string
+		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/tier_logo.svg", types.GetCDNUrl(ctx)))))
 		if templ_7745c5c3_Err != nil {
 			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/cv.templ`, Line: 90, Col: 138}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -83,12 +92,12 @@ func CVPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var5 string
-		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx)))))
+		var templ_7745c5c3_Var6 string
+		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx)))))
 		if templ_7745c5c3_Err != nil {
 			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/cv.templ`, Line: 103, Col: 139}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -96,12 +105,12 @@ func CVPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var6 string
-		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx)))))
+		var templ_7745c5c3_Var7 string
+		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/prezi_logo.svg", types.GetCDNUrl(ctx)))))
 		if templ_7745c5c3_Err != nil {
 			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/cv.templ`, Line: 120, Col: 139}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -109,12 +118,12 @@ func CVPage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var7 string
-		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/ibm_logo.svg", types.GetCDNUrl(ctx)))))
+		var templ_7745c5c3_Var8 string
+		templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/images/ibm_logo.svg", types.GetCDNUrl(ctx)))))
 		if templ_7745c5c3_Err != nil {
 			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/cv.templ`, Line: 140, Col: 137}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
