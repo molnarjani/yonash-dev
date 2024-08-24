@@ -196,7 +196,7 @@ func NavBar() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Mobile Menu Button --><button id=\"dropdownDefaultButton\" data-dropdown-toggle=\"dropdown\" class=\"md:hidden mobile-menu-button\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><title>bars-3-bottom-left</title><g fill=\"none\"><path d=\"M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></g></svg></button><!-- Mobile Menu Button Dropdown --><div id=\"dropdown\" class=\"z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Mobile Menu Button --><button id=\"dropdownDefaultButton\" data-dropdown-toggle=\"dropdown\" class=\"md:hidden mobile-menu-button\" type=\"button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><title>bars-3-bottom-left</title><g fill=\"none\"><path d=\"M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></g></svg></button><!-- Mobile Menu Button Dropdown --><div id=\"dropdown\" class=\"z-10 md:hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
