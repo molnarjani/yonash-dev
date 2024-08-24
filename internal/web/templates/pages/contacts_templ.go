@@ -48,7 +48,7 @@ func ContactsPage() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"mt-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl\">or</p><!-- contacts button --><div class=\"flex flex-wrap gap-4 justify-center\"><a href=\"mailto:janosmolnar1001@gmail.com\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">send me an email</a></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"mt-8 mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl\">or</p><!-- contacts button --><div class=\"flex flex-wrap gap-4 justify-center\"><a href=\"mailto:janosmolnar1001@gmail.com\" class=\"shadow-xl float-left inline-flex items-start justify-content px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800\">send me an email</a></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
