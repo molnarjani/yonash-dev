@@ -12,6 +12,15 @@ import (
 	"github.com/molnarjani/yonash-dev/internal/web/templates/pages/projects"
 )
 
+func HTMXOrRedirect(w http.ResponseWriter, r *http.Request) {
+	// Check if the current request has a 'HX-Request' header.
+	// For more information, see https://htmx.org/docs/#request-headers
+	if !htmx.IsHTMX(r) {
+		// If not, redirect to the root page.
+		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+	}
+}
+
 // indexViewHandler handles a view for the index page.
 func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 	// Define template meta tags.
@@ -44,6 +53,9 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 
 // pageRoutingHandler handles serving Page contents from API
 func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
+	// Redirect if not HTMX
+	HTMXOrRedirect(w, r)
+
 	pages := map[string]content.Page{
 		"projects": {Template: pages.ProjectsPage()},
 		"cv":       {Template: pages.CVPage()},
@@ -53,15 +65,6 @@ func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 
 	pageName := r.PathValue("page")
 	page := pages[pageName]
-
-	// Check, if the current request has a 'HX-Request' header.
-	// For more information, see https://htmx.org/docs/#request-headers
-	if !htmx.IsHTMX(r) {
-		// If not, return HTTP 400 error.
-		slog.Error("request API", "method", r.Method, "status", http.StatusBadRequest, "path", r.URL.Path)
-		w.WriteHeader(http.StatusBadRequest)
-		return
-	}
 
 	// Write HTML content.
 	page.Render(r, w)
@@ -78,24 +81,17 @@ func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 
 // pageRoutingHandler handles serving Page contents from API
 func projectRoutingHandler(w http.ResponseWriter, r *http.Request) {
+	// Redirect if not HTMX
+	HTMXOrRedirect(w, r)
 
 	projects := map[string]content.Page{
 		"esku":        {Template: projects.EskuProject()},
-		"yonash-dev":  {projects.YonashDevProject()},
-		"yonash-home": {projects.YonashHomeProject()},
+		"yonash-dev":  {Template: projects.YonashDevProject()},
+		"yonash-home": {Template: projects.YonashHomeProject()},
 	}
 
 	projectName := r.PathValue("project")
 	project := projects[projectName]
-
-	// Check, if the current request has a 'HX-Request' header.
-	// For more information, see https://htmx.org/docs/#request-headers
-	if !htmx.IsHTMX(r) {
-		// If not, return HTTP 400 error.
-		slog.Error("request API", "method", r.Method, "status", http.StatusBadRequest, "path", r.URL.Path)
-		w.WriteHeader(http.StatusBadRequest)
-		return
-	}
 
 	// Write HTML content.
 	project.Render(r, w)
