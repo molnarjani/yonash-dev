@@ -6,7 +6,7 @@
   "theme_color": "#FEFEF5",
   "display": "standalone",
   "orientation": "portrait",
-  "start_url": "yonash.dev",
+  "start_url": "https://yonash.dev",
   "icons": [
     {
       "src": "manifest-touch-icon.svg",
