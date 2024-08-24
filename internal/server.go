@@ -47,8 +47,11 @@ func RunServer(getenv func(string) string) error {
 		http.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(webStaticSubtree))))
 
 	}
-	// Handle API endpoints.
+	// Handle Page endpoints.
 	http.HandleFunc("GET /{page}", cdnURLMiddleware(pageRoutingHandler))
+
+	// Handle Project endpoints
+	http.HandleFunc("GET /projects/{project}", cdnURLMiddleware(projectRoutingHandler))
 
 	// Handle index page view.
 	http.HandleFunc("GET /{$}", cdnURLMiddleware(indexViewHandler))

@@ -9,6 +9,7 @@ import (
 	"github.com/molnarjani/yonash-dev/internal/content"
 	"github.com/molnarjani/yonash-dev/internal/web/templates"
 	"github.com/molnarjani/yonash-dev/internal/web/templates/pages"
+	"github.com/molnarjani/yonash-dev/internal/web/templates/pages/projects"
 )
 
 // indexViewHandler handles a view for the index page.
@@ -64,6 +65,40 @@ func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Write HTML content.
 	page.Render(r, w)
+
+	// Send htmx response.
+	err := htmx.NewResponse().Write(w)
+	if err != nil {
+		slog.Error("write response", "error", err)
+	}
+
+	// Send log message.
+	slog.Info("request API", "method", r.Method, "status", http.StatusOK, "path", r.URL.Path)
+}
+
+// pageRoutingHandler handles serving Page contents from API
+func projectRoutingHandler(w http.ResponseWriter, r *http.Request) {
+
+	projects := map[string]content.Page{
+		"esku":        {Template: projects.EskuProject()},
+		"yonash-dev":  {projects.YonashDevProject()},
+		"yonash-home": {projects.YonashHomeProject()},
+	}
+
+	projectName := r.PathValue("project")
+	project := projects[projectName]
+
+	// Check, if the current request has a 'HX-Request' header.
+	// For more information, see https://htmx.org/docs/#request-headers
+	if !htmx.IsHTMX(r) {
+		// If not, return HTTP 400 error.
+		slog.Error("request API", "method", r.Method, "status", http.StatusBadRequest, "path", r.URL.Path)
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	// Write HTML content.
+	project.Render(r, w)
 
 	// Send htmx response.
 	err := htmx.NewResponse().Write(w)

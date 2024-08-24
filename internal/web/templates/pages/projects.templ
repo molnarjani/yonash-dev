@@ -6,30 +6,35 @@ import (
     "github.com/molnarjani/yonash-dev/internal/types"
 )
 
+templ ProjectCard(headline, description, imagePath, projectRoutingKey string) {
+    <a href="#" hx-get={string(templ.URL(fmt.Sprintf("/projects/%s", projectRoutingKey)))} hx-target="#page-content" class="flex flex-col mb-8 items-center bg-white border border-gray-200 rounded-lg shadow-xl md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg" src={string(templ.URL(fmt.Sprintf("%s/%s", types.GetCDNUrl(ctx), imagePath)))} alt="picture of eskuvo.info website">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{ headline }</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{ description }</p>
+        </div>
+    </a>
+}
+
 templ ProjectsPage() {
     @components.Container() {
-        <a href="#" class="flex flex-col mb-3 items-center bg-white border border-gray-200 rounded-lg shadow-xl md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg" src={string(templ.URL(fmt.Sprintf("%s/static/images/esku.webp", types.GetCDNUrl(ctx))))} alt="picture of eskuvo.info website">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">ESKÜ - a wedding site generator</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">ESKÜ is a wedding website generator, that lets you pick and customise wedding website templates</p>
-            </div>
-        </a>
-
-        <a href="#" class="flex flex-col mb-3 items-center bg-white border border-gray-200 rounded-lg shadow-xl md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg"  src={string(templ.URL(fmt.Sprintf("%s/static/images/yonash-dev.webp", types.GetCDNUrl(ctx))))} alt="picture of yonash.dev website">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">yonash.dev - this portfolio website</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">a server side rendered website written in Go, where I collect my personal projects, work history, write my blog, etc</p>
-            </div>
-        </a>
-
-        <a href="#" class="flex flex-col mb-3 items-center bg-white border border-gray-200 rounded-lg shadow-xl md:flex-row md:max-w-4xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-64 md:rounded-none md:rounded-s-lg" src={string(templ.URL(fmt.Sprintf("%s/static/images/yonash-home.webp", types.GetCDNUrl(ctx))))} alt="picture of my homserver dashboard">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">yonash.home - my homeserver</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">a docker-compose based homeserver, where I host some self-made and some out-of-the box tools I use for organising my life, besides that I use it as a torrentbox</p>
-            </div>
-        </a>
+        @ProjectCard(
+            "ESKÜ - a wedding site generator",
+            "ESKÜ is a wedding website generator, that lets you pick and customise wedding website templates",
+            "static/images/esku.webp",
+            "esku",
+        )
+        @ProjectCard(
+            "yonash.dev - this portfolio website",
+            "a server side rendered website written in Go, where I collect my personal projects, work history, write my blog, etc",
+            "static/images/yonash-dev.webp",
+            "yonash-dev",
+        )
+        @ProjectCard(
+            "yonash.home - my homeserver",
+            "a docker-compose based homeserver, where I host some self-made and some out-of-the box tools I use for organising my life, besides that I use it as a torrentbox",
+            "static/images/yonash-home.webp",
+            "yonash-home",
+        )
     }
 }

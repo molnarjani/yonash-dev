@@ -1,0 +1,14 @@
+package projects
+
+import "github.com/molnarjani/yonash-dev/internal/web/templates/components"
+
+
+templ EskuProject() {
+    @components.ProjectContainer() {
+        <div class="grid grid-cols-1 gap-4 justify-center items-center">
+            <div>eskuvo.info project description</div>
+            <div>nothing here yet, come back later...</div>
+            @components.ContentSkeleton()
+        </div>
+    }
+}
