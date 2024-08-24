@@ -16,14 +16,14 @@
   ],
   "screenshots": [
     {
-      "src": "manifest-desktop-screenshot.jpg",
+      "src": "manifest-desktop-screenshot.webp",
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide",
       "label": "Desktop homescreen of My PWA Project"
     },
     {
-      "src": "manifest-mobile-screenshot.jpg",
+      "src": "manifest-mobile-screenshot.webp",
       "sizes": "720x1280",
       "type": "image/jpeg",
       "form_factor": "narrow",
