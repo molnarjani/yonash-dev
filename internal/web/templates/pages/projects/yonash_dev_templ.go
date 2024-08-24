@@ -40,7 +40,7 @@ func YonashDevProject() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><div>yonash.dev project description</div><div>Nothing Here Yet, come back later...</div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><div>yonash.dev project description</div><div>nothing here yet, come back later...</div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
