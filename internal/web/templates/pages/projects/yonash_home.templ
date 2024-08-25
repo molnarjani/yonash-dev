@@ -6,8 +6,8 @@ import "github.com/molnarjani/yonash-dev/internal/web/templates/components"
 templ YonashHomeProject() {
     @components.ProjectContainer() {
         <div class="grid grid-cols-1 gap-4 justify-center items-center">
-            <div>homeserver project description</div>
-            <div>nothing here yet, come back later...</div>
+            <p class="font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">homeserver project description</p>
+            <p class="mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">nothing here yet, come back later...</p>
             @components.ContentSkeleton()
         </div>
     }
