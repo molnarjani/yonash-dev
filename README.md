@@ -44,8 +44,7 @@ Project structure follows [golang-standards/project-layout](https://github.com/g
 > - `Templ`: [https://github.com/a-h/templ](https://github.com/a-h/templ)
 > - `golangci-lint`: [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
 
-To start your project, run the **Gowebly** CLI command in your terminal:
-
+To start your project, run the makefile command in your terminal:
 ```console
 make run
 ```

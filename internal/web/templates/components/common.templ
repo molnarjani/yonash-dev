@@ -1,0 +1,14 @@
+package components
+
+import (
+    "fmt"
+    "github.com/molnarjani/yonash-dev/internal/types"
+)
+
+templ Link(target string, text string) {
+   <a target="_blank" class="text-cyan-500" href={ templ.URL(target) }>{ text }</a>
+}
+
+templ Image(imagePath string, attrs templ.Attributes) {
+    <img src={string(templ.URL(fmt.Sprintf("%s/static/%s", types.GetCDNUrl(ctx), imagePath)))} {attrs...} />
+}

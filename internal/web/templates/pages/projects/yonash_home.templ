@@ -6,9 +6,39 @@ import "github.com/molnarjani/yonash-dev/internal/web/templates/components"
 templ YonashHomeProject() {
     @components.ProjectContainer() {
         <div class="grid grid-cols-1 gap-4 justify-center items-center">
-            <p class="font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">homeserver project description</p>
-            <p class="mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">nothing here yet, come back later...</p>
-            @components.ContentSkeleton()
+            <p class="font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">homeserver</p>
+            <p class="mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">
+                This is a self hosted linux server accessible from my local network, where I host multimedia services.
+                @components.Image("images/yonash-home.webp", templ.Attributes{})
+            </p>
+
+            <div class="text-left items-left">Notable stuff hosted on the server:</div>
+            <ul class="text-left items-left">
+            <li>
+                <span>@components.Link("https://heimdall.site/", "Heimdall")</span>: Homeserver landing page UI
+            </li>
+            <li>
+                <span>
+                    @components.Link("https://www.firefly-iii.org/", "Firefly III")
+                </span>: Finance manager app, with rules to automate importing credit card statements
+                (also made a <span>@components.Link("https://github.com/molnarjani/raiffeisen-csv-processor", "small CSV processor")</span> that transforms exported CSVs from my bank to required import format)
+            </li>
+            <li>
+                <span>
+                    @components.Link("https://www.home-assistant.io/", "Home Assistant")
+                </span>,
+                <span>
+                    @components.Link("https://www.zigbee2mqtt.io/", "Zigbee2MQTT")
+                </span>: For controlling my smart lights and IoT devices</li>
+            <li>
+                <span>
+                    @components.Link("https://deluge-torrent.org/", "Deluge")
+                </span>
+                &&
+                <span>
+                    @components.Link("https://kodi.tv/", "Kodi")
+                </span>: Torrent Client and multimedia server</li>
+            </ul>
         </div>
     }
 }

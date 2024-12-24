@@ -40,15 +40,47 @@ func YonashDevProject() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><p class=\"font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\">yonash.dev project description</p><p class=\"mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\">nothing here yet, come back later...</p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><h2 class=\"text-xl font-bold mt-6 mb-4\">yonash.dev</h2><p class=\"mt-2 lg:mt-4 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\">This portfolio website is running on a simple <span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = components.ContentSkeleton().Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = components.Link("https://go.dev/", "go").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> webserver, entirely server-side rendered. <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://htmx.org/", "HTMX").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used for interactive elements, for the templates, a Go library called  <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://github.com/a-h/templ", "templ").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used. Eyecandy is mostly done using <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://tailwindcss.com/", "TailwindCSS").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span>. Hosted on an AWS EC2 instance.</p><div class=\"flex justify-center items-center gap-4 mt-4\"><span>repo:</span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.GithubIcon("https://github.com/molnarjani/yonash-dev").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

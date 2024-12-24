@@ -11,8 +11,8 @@ templ LinkedinIcon() {
     </a>
 }
 
-templ GithubIcon() {
-    <a class="text-gray-700 hover:text-orange-600" aria-label="GitHub" href="https://github.com/molnarjani"
+templ GithubIcon(target string) {
+    <a class="text-gray-700 hover:text-orange-600" aria-label="GitHub" href={ templ.URL(target) }
         target="_blank">
         <svg class="h-6" width="21px" height="21px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="text-center">
             <path fill="currentColor"
@@ -27,6 +27,6 @@ templ SocialIcons() {
     <!-- social icons -->
     <div class="flex justify-center items-center gap-4 mt-4">
         @LinkedinIcon()
-        @GithubIcon()
+        @GithubIcon("https://github.com/molnarjani")
     </div>
 }
