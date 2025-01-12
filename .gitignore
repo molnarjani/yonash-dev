@@ -17,6 +17,11 @@ go.work
 # Environment files.
 .env
 
+# certfiles and priv keys
+.cert
+.pem
+.key
+
 # Generated folders.
 bin/
 dist-ssr/
