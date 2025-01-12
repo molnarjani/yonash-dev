@@ -1,5 +1,5 @@
 APP_NAME = yonash-dev-server
-EC2_HOST = ec2-user@54.198.152.248
+EC2_HOST = ec2-user@52.54.215.37
 
 # Colors
 CYAN = \033[0;36m
@@ -67,15 +67,15 @@ ssh:
 
 aws-s3-sync:
 	@echo "Synchronizing static files to S3..."
-	@aws --profile eskuvoinfo s3 sync internal/web/static s3://yonash-dev/static/
+	@aws --profile yonashdev s3 sync internal/web/static s3://yonashdev/static/
 
 invalidate-static-distribution:
 	@echo "Invalidating CloudFront distribution..."
-	@aws --profile eskuvoinfo cloudfront create-invalidation --distribution-id E1SY9B39D6IDK --paths "/*"
+	@aws --profile yonashdev cloudfront create-invalidation --distribution-id E1SY9B39D6IDK --paths "/*"
 
 
 publish: docker-build aws-s3-sync
-	aws --profile eskuvoinfo ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 024848452958.dkr.ecr.us-east-1.amazonaws.com
+	aws --profile yonashdev ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 024848452958.dkr.ecr.us-east-1.amazonaws.com
 	docker tag  yonash-dev-server:latest 024848452958.dkr.ecr.us-east-1.amazonaws.com/yonashdev:latest
 	docker push 024848452958.dkr.ecr.us-east-1.amazonaws.com/yonashdev:latest
 
