@@ -1,5 +1,5 @@
 APP_NAME = yonash-dev-server
-EC2_HOST = ec2-user@52.54.215.37
+EC2_HOST = ec2-user@44.204.4.128
 
 # Colors
 CYAN = \033[0;36m
@@ -55,9 +55,9 @@ deploy: build-amd aws-s3-sync invalidate-static-distribution
 
 	@echo "${CYAN}Killing old app..."
 	@ssh ${EC2_HOST}  "lsof -i :8080 && lsof -i :8080 | tail -n 1 | awk '{ print $$2 }' | xargs kill || true"
-	
+	@
 	@echo "${CYAN}Restarting app..."
-	@ssh ${EC2_HOST} "CDN_URL='https://d1jqnkgd8d6cn5.cloudfront.net' nohup /app/${APP_NAME} > /tmp/${APP_NAME}.log 2>&1 &"
+	@ssh ${EC2_HOST} "CDN_URL='https://dos171oaztifi.cloudfront.net' nohup /app/${APP_NAME} > /tmp/${APP_NAME}.log 2>&1 &"
 
 	@echo
 	@echo "${GREEN}Deploy complete."
@@ -71,7 +71,7 @@ aws-s3-sync:
 
 invalidate-static-distribution:
 	@echo "Invalidating CloudFront distribution..."
-	@aws --profile yonashdev cloudfront create-invalidation --distribution-id E1SY9B39D6IDK --paths "/*"
+	@aws --profile yonashdev cloudfront create-invalidation --distribution-id E2DGIBNIQVV3MB --paths "/*"
 
 
 publish: docker-build aws-s3-sync
