@@ -55,6 +55,6 @@ The backend part is located in the `*.go` files in your project folder.
 
 The `./internal/web/templates` folder contains Templ templates that you can use in your frontend part. Also, the `./internal/web/assets` folder contains the `styles.scss` (main styles) and `scripts.js` (main scripts) files.
 
-The `./internal/web/static` folder contains all the static files: icons, images, PWA (Progressive Web App) manifest and other builded/minified assets.
+The `./internal/web/static` folder contains all the static files: icons, images, other builded/minified assets.
 
 To tests CDN run the program with `CDN_URL` parameter.

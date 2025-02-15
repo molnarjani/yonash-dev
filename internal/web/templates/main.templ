@@ -21,7 +21,6 @@ templ Layout(title string, metaTags, bodyContent templ.Component) {
 			<link rel="dns-prefetch" href="//fonts.gstatic.com"/>
 			<link rel="preconnect" href="//fonts.googleapis.com" crossorigin/>
 			<link rel="preconnect" href="//fonts.gstatic.com" crossorigin/>
-			<link rel="manifest" href={string(templ.URL(fmt.Sprintf("%s/static/manifest.webmanifest", types.GetCDNUrl(ctx))))}/>
 			<link rel="apple-touch-icon" href={string(templ.URL(fmt.Sprintf("%s/static/apple-touch-icon.webp", types.GetCDNUrl(ctx))))}/>
 			<link rel="shortcut icon" href={string(templ.URL(fmt.Sprintf("%s/static/favicon.ico", types.GetCDNUrl(ctx))))} type="image/x-icon"/>
 			<link rel="icon" href={string(templ.URL(fmt.Sprintf("%s/static/favicon.svg", types.GetCDNUrl(ctx))))} type="image/svg+xml"/>
