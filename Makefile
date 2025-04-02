@@ -79,4 +79,29 @@ publish: docker-build aws-s3-sync
 	docker tag  yonash-dev-server:latest 024848452958.dkr.ecr.us-east-1.amazonaws.com/yonashdev:latest
 	docker push 024848452958.dkr.ecr.us-east-1.amazonaws.com/yonashdev:latest
 
+renew-cert:
+	@echo "${CYAN}Renewing SSL certificate..."
+	@./scripts/renew_certificate.sh
+
+help:
+	@echo "${CYAN}Available commands:${CYAN}"
+	@echo "${GREEN}  run                 ${CYAN}- Run the application from /tmp"
+	@echo "${GREEN}  run-dev             ${CYAN}- Run the application in development mode using air"
+	@echo "${GREEN}  clean               ${CYAN}- Remove the built executable from /tmp"
+	@echo "${GREEN}  build               ${CYAN}- Build the application and static assets"
+	@echo "${GREEN}  build-amd           ${CYAN}- Build the application for AMD architecture"
+	@echo "${GREEN}  build-npm           ${CYAN}- Build static assets using npm"
+	@echo "${GREEN}  build-templ         ${CYAN}- Generate Go templates"
+	@echo "${GREEN}  lint                ${CYAN}- Run linting on the codebase"
+	@echo "${GREEN}  lint-fix            ${CYAN}- Fix linting issues automatically"
+	@echo "${GREEN}  docker-build        ${CYAN}- Build a Docker image for the application"
+	@echo "${GREEN}  dc-up               ${CYAN}- Start Docker Compose services"
+	@echo "${GREEN}  dc-down             ${CYAN}- Stop Docker Compose services"
+	@echo "${GREEN}  deploy              ${CYAN}- Deploy the application to AWS EC2"
+	@echo "${GREEN}  ssh                 ${CYAN}- SSH into the EC2 instance"
+	@echo "${GREEN}  aws-s3-sync         ${CYAN}- Sync static files to AWS S3"
+	@echo "${GREEN}  invalidate-static-distribution ${CYAN}- Invalidate CloudFront distribution cache"
+	@echo "${GREEN}  publish             ${CYAN}- Build and push Docker image to AWS ECR"
+	@echo "${GREEN}  renew-cert          ${CYAN}- Renew the SSL certificate"
+
 .PHONY: run clean build build-arm lint lint-fix docker-build dc-up dc-down deploy aws-s3-sync publish
