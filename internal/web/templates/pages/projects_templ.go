@@ -123,6 +123,19 @@ func ProjectsPage() templ.Component {
 			}
 			ctx = templ.InitializeContext(ctx)
 			templ_7745c5c3_Err = ProjectCard(
+				"TASTINGROOM - website of a high-end bar",
+				"a website I've made for a bar",
+				"static/images/tastingroom.webp",
+				"tastingroom",
+			).Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = ProjectCard(
 				"ESKÜ - a wedding site generator",
 				"ESKÜ is a wedding website generator, that lets you pick and customise wedding website templates",
 				"static/images/esku.webp",

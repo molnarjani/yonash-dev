@@ -1,0 +1,46 @@
+package projects
+
+import (
+    "github.com/molnarjani/yonash-dev/internal/web/templates/components"
+)
+
+
+templ TastingRoomProject() {
+    @components.ProjectContainer() {
+        <div class="grid grid-cols-1 gap-4 justify-center items-center">
+            <h2 class="text-xl font-bold mt-6 mb-4">TASTINGROOM - website of a high-end bar</h2>
+            <p class="mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">
+                <p>
+                @components.Image("images/tastingroom.webp", templ.Attributes{})
+                </p>
+
+                <p>
+                The website of TASTINGROOM was for a bar I almost joined as a co-owner.<br>
+                This was an interesting project as I do not usually do frontend-end coding as much.<br>
+                Trying out <span>@components.Link("https://astro.build/", "AstroJS")</span> was definitely a fun experience.
+                </p>
+
+                <p class="text-left">
+                Features
+                <ul class="list-disc list-inside text-left">
+                    <li>Modern design</li>
+                    <li>Parallax scrolling</li>
+                    <li>i18n support</li>
+                    <li>Responsive layout for mobile and desktop</li>
+                    <li>Flash cards</li>
+                    <li>Gallery module</li>
+                </ul>
+                </p>
+
+                Demo:
+                <p class="mt-6 flex justify-center">
+                    <video controls class="rounded-lg shadow-lg max-w-full h-auto">
+                        <source src="static/videos/tastingroom.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </p>
+
+            </p>
+        </div>
+    }
+}

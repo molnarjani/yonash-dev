@@ -27,6 +27,7 @@ var Pages = []Page{
 	{RoutingKey: "cv", Template: pages.CVPage()},
 	{RoutingKey: "blog", Template: pages.BlogPage()},
 	{RoutingKey: "contact", Template: pages.ContactsPage()},
+	{RoutingKey: "project-tastingroom", Template: projects.TastingRoomProject()},
 	{RoutingKey: "project-esku", Template: projects.EskuProject()},
 	{RoutingKey: "project-yonash-dev", Template: projects.YonashDevProject()},
 	{RoutingKey: "project-yonash-home", Template: projects.YonashHomeProject()},

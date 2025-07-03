@@ -19,6 +19,12 @@ templ ProjectCard(headline, description, imagePath, projectRoutingKey string) {
 templ ProjectsPage() {
     @components.Container() {
         @ProjectCard(
+            "TASTINGROOM - website of a high-end bar",
+            "a website I've made for a bar",
+            "static/images/tastingroom.webp",
+            "tastingroom",
+        )
+        @ProjectCard(
             "ESKÜ - a wedding site generator",
             "ESKÜ is a wedding website generator, that lets you pick and customise wedding website templates",
             "static/images/esku.webp",
