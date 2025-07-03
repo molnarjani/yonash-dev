@@ -7,31 +7,106 @@ import (
 
 templ EskuProject() {
     @components.ProjectContainer() {
-        <div class="grid grid-cols-1 gap-4 justify-center items-center">
-            <h2 class="text-xl font-bold mt-6 mb-4">ESKÜ - wedding website builder</h2>
-            <p class="mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl">
-                eskuvo.info was a website I made for generating website templates for hosting wedding related information, when is the wedding, what will be the schedule, how to get to the venue, etc.
-                Users can generate their site by selecting templates, filling some basic information.
-                After the site is generated, they can customize the sections in a more advanced editor.
-
-                <p>
-                The form looks like this:
-                @components.Image("images/esku_form.webp", templ.Attributes{})
+        <div class="max-w-4xl mx-auto space-y-8">
+            <!-- Header Section -->
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                    ESKÜ
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                    Wedding website builder
                 </p>
+            </div>
 
-                <p>
-                This is how the editor looks like:
-                @components.Image("images/esku_editor.webp", templ.Attributes{})
+            <!-- Hero Image -->
+            <div class="rounded-lg overflow-hidden shadow-xl">
+                @components.Image("images/esku.webp", templ.Attributes{
+                    "class": "w-full h-auto",
+                    "alt": "ESKÜ website preview",
+                })
+            </div>
+
+            <!-- Project Description -->
+            <div class="prose prose-lg max-w-none dark:prose-invert">
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    eskuvo.info was a website I made for generating website templates for hosting wedding related information - when is the wedding, what will be the schedule, how to get to the venue, etc. Users could generate their site by selecting templates and filling some basic information. After the site was generated, they could customize the sections in a more advanced editor.
                 </p>
+            </div>
 
-                <p></p>
-                The landing page and the website form was build using a GUI website builder called Nicepage, which I highly regret, as its really hard to move away from it or customize it afterwards without doing everything in the editor.
-                <div>
-                    The editor and the templates are using Django template language and <span>@components.Link("https://wagtail.org/", "Wagtail CMS")</span>. The default wagtail editor was heavily customized to make the UI much simpler.
+            <!-- Features Section -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Key Features
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Template generation</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Advanced editor</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Django templates</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Wagtail CMS</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Custom UI</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700 dark:text-gray-300">Responsive design</span>
+                    </div>
                 </div>
-                In the end the site never really got tracktion, so I shut if down, but overall building such a complex site that is close to production ready was a great learning experience.
-                
-            </p>
+            </div>
+
+            <!-- Screenshots Section -->
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+                        Form Interface
+                    </h3>
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        @components.Image("images/esku_form.webp", templ.Attributes{
+                            "class": "w-full h-auto",
+                            "alt": "ESKÜ form interface",
+                        })
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+                        Advanced Editor
+                    </h3>
+                    <div class="rounded-lg overflow-hidden shadow-xl">
+                        @components.Image("images/esku_editor.webp", templ.Attributes{
+                            "class": "w-full h-auto",
+                            "alt": "ESKÜ editor interface",
+                        })
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Details -->
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Technical Stack
+                </h3>
+                <div class="prose prose-lg max-w-none dark:prose-invert">
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                        The landing page and website form were built using Nicepage (a GUI website builder), which I regret using as it's really hard to move away from or customize afterwards without doing everything in the editor.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        The editor and templates used Django template language and <span>@components.Link("https://wagtail.org/", "Wagtail CMS")</span>. The default Wagtail editor was heavily customized to make the UI much simpler. In the end, the site never really got traction, so I shut it down, but overall building such a complex site that was close to production-ready was a great learning experience.
+                    </p>
+                </div>
+            </div>
         </div>
     }
 }

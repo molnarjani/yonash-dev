@@ -42,15 +42,18 @@ func TastingRoomProject() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><h2 class=\"text-xl font-bold mt-6 mb-4\">TASTINGROOM - website of a high-end bar</h2><p class=\"mb-4 lg:mb-8 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\"><p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-4xl mx-auto space-y-8\"><!-- Header Section --><div class=\"text-center\"><h1 class=\"text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4\">TASTINGROOM</h1><p class=\"text-lg text-gray-600 dark:text-gray-300 mb-8\">Website for a high-end bar</p></div><!-- Hero Image --><div class=\"rounded-lg overflow-hidden shadow-xl\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = components.Image("images/tastingroom.webp", templ.Attributes{}).Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = components.Image("images/tastingroom.webp", templ.Attributes{
+				"class": "w-full h-auto",
+				"alt":   "TASTINGROOM website preview",
+			}).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p>The website of TASTINGROOM was for a bar I almost joined as a co-owner.<br>This was an interesting project as I do not usually do frontend-end coding as much.<br>Trying out <span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Project Description --><div class=\"prose prose-lg max-w-none dark:prose-invert\"><p class=\"text-gray-700 dark:text-gray-300 leading-relaxed\">The website of TASTINGROOM was for a bar I almost joined as a co-owner. This was an interesting project as I don't usually do frontend coding as much.<br>Trying out <span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -58,7 +61,15 @@ func TastingRoomProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> was definitely a fun experience.</p><p class=\"text-left\">Features<ul class=\"list-disc list-inside text-left\"><li>Modern design</li><li>Parallax scrolling</li><li>i18n support</li><li>Responsive layout for mobile and desktop</li><li>Flash cards</li><li>Gallery module</li></ul></p>Demo:<p class=\"mt-6 flex justify-center\"><video controls class=\"rounded-lg shadow-lg max-w-full h-auto\"><source src=\"static/videos/tastingroom.mp4\" type=\"video/mp4\"> Your browser does not support the video tag.</video></p></p></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> was definitely a fun experience.</p></div><!-- Features Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Modern design</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Parallax scrolling</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">i18n support</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Responsive layout</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Flash cards</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Gallery module</span></div></div></div><!-- Demo Section --><div class=\"text-center\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-6\">Demo</h3><div class=\"rounded-lg overflow-hidden shadow-xl bg-gray-100 dark:bg-gray-800 p-4\"><video loop=\"true\" autoplay=\"autoplay\" controls muted class=\"w-full h-auto rounded-lg\" poster=\"images/tastingroom.webp\"><source src=\"static/videos/tastingroom.mp4\" type=\"video/mp4\"> Your browser does not support the video tag.<script>\n                            document.currentScript.parentElement.autoplay = true;\n                        </script></video></div></div><!-- Repository Link --><div class=\"text-center\"><div class=\"inline-flex items-center gap-3 px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-lg\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Repository:</span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.GithubIcon("https://github.com/molnarjani/tastingroom").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

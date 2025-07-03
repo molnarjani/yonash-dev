@@ -40,11 +40,22 @@ func YonashDevProject() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 gap-4 justify-center items-center\"><h2 class=\"text-xl font-bold mt-6 mb-4\">yonash.dev</h2><p class=\"mt-2 lg:mt-4 font-light text-center text-gray-700 dark:text-gray-400 sm:text-xl\">This portfolio website is running on a simple <span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"max-w-4xl mx-auto space-y-8\"><!-- Header Section --><div class=\"text-center\"><h1 class=\"text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4\">yonash.dev</h1><p class=\"text-lg text-gray-600 dark:text-gray-300 mb-8\">Modern portfolio website with server-side rendering</p></div><!-- Hero Image --><div class=\"rounded-lg overflow-hidden shadow-xl\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = components.Link("https://go.dev/", "go").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = components.Image("images/yonash-dev.webp", templ.Attributes{
+				"class": "w-full h-auto",
+				"alt":   "yonash.dev website preview",
+			}).Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Project Description --><div class=\"prose prose-lg max-w-none dark:prose-invert\"><p class=\"text-gray-700 dark:text-gray-300 leading-relaxed\">This portfolio website is running on a simple <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://go.dev/", "Go").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -56,7 +67,7 @@ func YonashDevProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used for interactive elements, for the templates, a Go library called  <span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used for interactive elements, and for the templates, a Go library called <span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -64,7 +75,7 @@ func YonashDevProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used. Eyecandy is mostly done using <span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> is used. Eye candy is mostly done using <span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -72,7 +83,7 @@ func YonashDevProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span>. Hosted on an AWS EC2 instance.</p><div class=\"flex justify-center items-center gap-4 mt-4\"><span>repo:</span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span>. Hosted on an AWS EC2 instance.</p></div><!-- Features Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Server-side rendering</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">HTMX interactivity</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Go templates</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">TailwindCSS</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">AWS hosting</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Responsive design</span></div></div></div><!-- Tech Stack --><div class=\"bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Technical Stack</h3><div class=\"grid grid-cols-2 md:grid-cols-4 gap-4 text-center\"><div class=\"p-3 bg-white dark:bg-gray-700 rounded-lg shadow\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Go</span></div><div class=\"p-3 bg-white dark:bg-gray-700 rounded-lg shadow\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">HTMX</span></div><div class=\"p-3 bg-white dark:bg-gray-700 rounded-lg shadow\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Templ</span></div><div class=\"p-3 bg-white dark:bg-gray-700 rounded-lg shadow\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">TailwindCSS</span></div></div></div><!-- Repository Link --><div class=\"text-center\"><div class=\"inline-flex items-center gap-3 px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-lg\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Repository:</span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -80,7 +91,7 @@ func YonashDevProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
