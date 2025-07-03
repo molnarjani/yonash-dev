@@ -77,10 +77,16 @@ func indexViewHandler(w http.ResponseWriter, r *http.Request) {
 // pageRoutingHandler handles serving Page contents from API
 func pageRoutingHandler(w http.ResponseWriter, r *http.Request) {
 	pageName := r.PathValue("page")
-	page, _ := content.GetPageByRoutingKey(pageName)
+	page, ok := content.GetPageByRoutingKey(pageName)
 
 	// Redirect if not HTMX
 	HTMXOrRedirect(w, r, page)
+
+	// Handle 404 case
+	if !ok {
+		http.Error(w, "Page not found", http.StatusNotFound)
+		return
+	}
 
 	// Write HTML content.
 	page.Render(r, w)
