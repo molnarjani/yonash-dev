@@ -51,7 +51,7 @@ func YonashHomeProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Project Description --><div class=\"prose prose-lg max-w-none dark:prose-invert\"><p class=\"text-gray-700 dark:text-gray-300 leading-relaxed\">This is a self-hosted Linux server accessible from my local network, where I host multimedia services and home automation tools.  It serves as the central hub for my smart home setup and personal cloud services.</p></div><!-- Services Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-6\">Hosted Services</h3><div class=\"space-y-4\"><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-blue-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><!-- Project Description --><div class=\"prose prose-lg max-w-none dark:prose-invert\"><p class=\"text-gray-700 dark:text-gray-300 leading-relaxed\">This is a self-hosted Linux server accessible from my local network, where I host multimedia services and home automation tools.  It serves as the central hub for my smart home setup and personal cloud services.</p></div><!-- Services Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-6\">Hosted Services</h3><div class=\"space-y-4\"><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-blue-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white text-left\"><span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -59,7 +59,7 @@ func YonashHomeProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"text-gray-600 dark:text-gray-400 text-sm\">Homeserver landing page UI for easy access to all services</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-green-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"text-gray-600 dark:text-gray-400 text-sm text-left\">Homeserver landing page UI for easy access to all services</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-green-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white text-left\"><span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -67,7 +67,15 @@ func YonashHomeProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"text-gray-600 dark:text-gray-400 text-sm\">Finance manager app with automated credit card statement importing  (includes a custom @components.Link(\"https://github.com/molnarjani/raiffeisen-csv-processor\", \"CSV processor\") for bank exports)</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-purple-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"text-gray-600 dark:text-gray-400 text-sm text-left\">Finance manager app with automated credit card statement importing, plus a custom CSV processor app: ")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://github.com/molnarjani/raiffeisen-csv-processor", "CSV processor").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-purple-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white text-left\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -75,7 +83,15 @@ func YonashHomeProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("+ @components.Link(\"https://www.zigbee2mqtt.io/\", \"Zigbee2MQTT\")</div><div class=\"text-gray-600 dark:text-gray-400 text-sm\">Smart home automation platform for controlling lights and IoT devices</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-red-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("+ <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://www.zigbee2mqtt.io/", "Zigbee2MQTT").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"text-gray-600 dark:text-gray-400 text-sm text-left\">Smart home automation platform for controlling lights and IoT devices</div></div></div><div class=\"flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg\"><div class=\"w-2 h-2 bg-red-500 rounded-full mt-2\"></div><div><div class=\"font-medium text-gray-900 dark:text-white text-left\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -83,7 +99,15 @@ func YonashHomeProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("+ @components.Link(\"https://kodi.tv/\", \"Kodi\")</div><div class=\"text-gray-600 dark:text-gray-400 text-sm\">Torrent client and multimedia server for local content streaming</div></div></div></div></div><!-- Features Section --><div class=\"bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Self-hosted infrastructure</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Home automation</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Financial management</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Media streaming</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">IoT integration</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Local network access</span></div></div></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("+ <span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = components.Link("https://kodi.tv/", "Kodi").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"text-gray-600 dark:text-gray-400 text-sm text-left\">Torrent client and multimedia server for local content streaming</div></div></div></div></div><!-- Features Section --><div class=\"bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Self-hosted infrastructure</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Home automation</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Financial management</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Media streaming</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">IoT integration</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Local network access</span></div></div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

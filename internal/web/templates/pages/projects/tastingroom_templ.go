@@ -9,6 +9,8 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
+	"fmt"
+	"github.com/molnarjani/yonash-dev/internal/types"
 	"github.com/molnarjani/yonash-dev/internal/web/templates/components"
 )
 
@@ -61,7 +63,33 @@ func TastingRoomProject() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> was definitely a fun experience.</p></div><!-- Features Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Modern design</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Parallax scrolling</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">i18n support</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Responsive layout</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Flash cards</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Gallery module</span></div></div></div><!-- Demo Section --><div class=\"text-center\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-6\">Demo</h3><div class=\"rounded-lg overflow-hidden shadow-xl bg-gray-100 dark:bg-gray-800 p-4\"><video loop=\"true\" autoplay=\"autoplay\" controls muted class=\"w-full h-auto rounded-lg\" poster=\"images/tastingroom.webp\"><source src=\"static/videos/tastingroom.mp4\" type=\"video/mp4\"> Your browser does not support the video tag.<script>\n                            document.currentScript.parentElement.autoplay = true;\n                        </script></video></div></div><!-- Repository Link --><div class=\"text-center\"><div class=\"inline-flex items-center gap-3 px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-lg\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Repository:</span>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> was definitely a fun experience.</p></div><!-- Features Section --><div class=\"bg-gray-50 dark:bg-gray-800 rounded-lg p-6\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-4\">Key Features</h3><div class=\"grid grid-cols-1 md:grid-cols-2 gap-3\"><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Modern design</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Parallax scrolling</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">i18n support</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Responsive layout</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Flash cards</span></div><div class=\"flex items-center space-x-3\"><div class=\"w-2 h-2 bg-blue-500 rounded-full\"></div><span class=\"text-gray-700 dark:text-gray-300\">Gallery module</span></div></div></div><!-- Demo Section --><div class=\"text-center\"><h3 class=\"text-xl font-semibold text-gray-900 dark:text-white mb-6\">Demo</h3><div class=\"rounded-lg overflow-hidden shadow-xl bg-gray-100 dark:bg-gray-800 p-4\"><video loop=\"true\" autoplay=\"autoplay\" controls muted class=\"w-full h-auto rounded-lg\" poster=\"")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var3 string
+			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/%s", types.GetCDNUrl(ctx), "images/tastingroom.webp"))))
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/projects/tastingroom.templ`, Line: 82, Col: 127}
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\"><source src=\"")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var4 string
+			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(string(templ.URL(fmt.Sprintf("%s/static/%s", types.GetCDNUrl(ctx), "videos/tastingroom.mp4"))))
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/web/templates/pages/projects/tastingroom.templ`, Line: 84, Col: 131}
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" type=\"video/mp4\"> Your browser does not support the video tag.<script>\n                            document.currentScript.parentElement.autoplay = true;\n                        </script></video></div></div><!-- Repository Link --><div class=\"text-center\"><div class=\"inline-flex items-center gap-3 px-6 py-3 bg-gray-100 dark:bg-gray-800 rounded-lg\"><span class=\"text-gray-700 dark:text-gray-300 font-medium\">Repository:</span>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

@@ -1,6 +1,8 @@
 package projects
 
 import (
+    "fmt"
+    "github.com/molnarjani/yonash-dev/internal/types"
     "github.com/molnarjani/yonash-dev/internal/web/templates/components"
 )
 
@@ -77,9 +79,9 @@ templ TastingRoomProject() {
                     <video 
                         loop="true" autoplay="autoplay" controls muted
                         class="w-full h-auto rounded-lg"
-                        poster="images/tastingroom.webp"
+                        poster={string(templ.URL(fmt.Sprintf("%s/static/%s", types.GetCDNUrl(ctx), "images/tastingroom.webp")))}
                     >
-                        <source src="static/videos/tastingroom.mp4" type="video/mp4">
+                        <source src={string(templ.URL(fmt.Sprintf("%s/static/%s", types.GetCDNUrl(ctx), "videos/tastingroom.mp4")))} type="video/mp4">
                         Your browser does not support the video tag.
                         <script>
                             document.currentScript.parentElement.autoplay = true;

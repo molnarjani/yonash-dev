@@ -41,10 +41,10 @@ templ YonashHomeProject() {
                     <div class="flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg">
                         <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                         <div>
-                            <div class="font-medium text-gray-900 dark:text-white">
-                                @components.Link("https://heimdall.site/", "Heimdall")
+                            <div class="font-medium text-gray-900 dark:text-white text-left">
+                                <span>@components.Link("https://heimdall.site/", "Heimdall")</span>
                             </div>
-                            <div class="text-gray-600 dark:text-gray-400 text-sm">
+                            <div class="text-gray-600 dark:text-gray-400 text-sm text-left">
                                 Homeserver landing page UI for easy access to all services
                             </div>
                         </div>
@@ -53,12 +53,12 @@ templ YonashHomeProject() {
                     <div class="flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg">
                         <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                         <div>
-                            <div class="font-medium text-gray-900 dark:text-white">
-                                @components.Link("https://www.firefly-iii.org/", "Firefly III")
+                            <div class="font-medium text-gray-900 dark:text-white text-left">
+                                <span>@components.Link("https://www.firefly-iii.org/", "Firefly III")</span>
                             </div>
-                            <div class="text-gray-600 dark:text-gray-400 text-sm">
-                                Finance manager app with automated credit card statement importing 
-                                (includes a custom @components.Link("https://github.com/molnarjani/raiffeisen-csv-processor", "CSV processor") for bank exports)
+                            <div class="text-gray-600 dark:text-gray-400 text-sm text-left">
+                                Finance manager app with automated credit card statement importing, plus a custom CSV processor app: 
+                                @components.Link("https://github.com/molnarjani/raiffeisen-csv-processor", "CSV processor")
                             </div>
                         </div>
                     </div>
@@ -66,10 +66,10 @@ templ YonashHomeProject() {
                     <div class="flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg">
                         <div class="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                         <div>
-                            <div class="font-medium text-gray-900 dark:text-white">
-                                @components.Link("https://www.home-assistant.io/", "Home Assistant") + @components.Link("https://www.zigbee2mqtt.io/", "Zigbee2MQTT")
+                            <div class="font-medium text-gray-900 dark:text-white text-left">
+                                @components.Link("https://www.home-assistant.io/", "Home Assistant") + <span>@components.Link("https://www.zigbee2mqtt.io/", "Zigbee2MQTT")</span>
                             </div>
-                            <div class="text-gray-600 dark:text-gray-400 text-sm">
+                            <div class="text-gray-600 dark:text-gray-400 text-sm text-left">
                                 Smart home automation platform for controlling lights and IoT devices
                             </div>
                         </div>
@@ -78,10 +78,10 @@ templ YonashHomeProject() {
                     <div class="flex items-start space-x-3 p-4 bg-white dark:bg-gray-700 rounded-lg">
                         <div class="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
                         <div>
-                            <div class="font-medium text-gray-900 dark:text-white">
-                                @components.Link("https://deluge-torrent.org/", "Deluge") + @components.Link("https://kodi.tv/", "Kodi")
+                            <div class="font-medium text-gray-900 dark:text-white text-left">
+                                @components.Link("https://deluge-torrent.org/", "Deluge") + <span>@components.Link("https://kodi.tv/", "Kodi")</span>
                             </div>
-                            <div class="text-gray-600 dark:text-gray-400 text-sm">
+                            <div class="text-gray-600 dark:text-gray-400 text-sm text-left">
                                 Torrent client and multimedia server for local content streaming
                             </div>
                         </div>
